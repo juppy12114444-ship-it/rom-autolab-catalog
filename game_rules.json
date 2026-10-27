@@ -1,0 +1,105 @@
+{
+  "schema": 1,
+  "profiles": [
+    {
+      "id": "demo-original-negative-control",
+      "fingerprint": "a71c9496083a610fe313711d02d1eaa2bae513ab96d021bd38dd143b69465cfb",
+      "system": "NES",
+      "watches": [
+        {
+          "id": "started",
+          "address": 4,
+          "width": 1,
+          "endian": "little",
+          "frames": [
+            300
+          ]
+        },
+        {
+          "id": "hp",
+          "address": 32,
+          "width": 1,
+          "endian": "little",
+          "frames": [
+            600,
+            1200
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "start": 120,
+          "end": 125,
+          "buttons": [
+            "start"
+          ]
+        }
+      ],
+      "preconditions": [
+        {
+          "watch": "started",
+          "op": "eq",
+          "value": 1
+        }
+      ],
+      "checks": [
+        {
+          "effect": "無敵",
+          "watch": "hp",
+          "op": "eq",
+          "value": 100
+        }
+      ]
+    },
+    {
+      "id": "demo-modified-invincible",
+      "fingerprint": "4ba6ee0d904f4c6e0f7b5291bc2aba7d60fbbdfbfdb88f1a41839bbb96327740",
+      "system": "NES",
+      "watches": [
+        {
+          "id": "started",
+          "address": 4,
+          "width": 1,
+          "endian": "little",
+          "frames": [
+            300
+          ]
+        },
+        {
+          "id": "hp",
+          "address": 32,
+          "width": 1,
+          "endian": "little",
+          "frames": [
+            600,
+            1200
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "start": 120,
+          "end": 125,
+          "buttons": [
+            "start"
+          ]
+        }
+      ],
+      "preconditions": [
+        {
+          "watch": "started",
+          "op": "eq",
+          "value": 1
+        }
+      ],
+      "checks": [
+        {
+          "effect": "無敵",
+          "watch": "hp",
+          "op": "eq",
+          "value": 100
+        }
+      ]
+    }
+  ]
+}
